@@ -1,31 +1,26 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
 
 class point {
 private:
-	int x;
-	int y;
+	int x,y;
 public:
-	void setx(int in_x) {
+	void inP(int in_x,int in_y) {
 		x = in_x;
-	}
-	void sety(int in_y) {
 		y = in_y;
 	}
-	int getx() {
-		return x;
-	}
-	int gety() {
-		return y;
+	void outP(int& out_x, int& out_y) {
+		out_x = x;
+		out_y = y;
 	}
 };
 
 int main() {
 	point pt;
-	pt.setx(10);
-	pt.sety(5);
-	cout << pt.getx() << pt.gety();
+	int x, y;
+	pt.inP(10, 5);
+	pt.outP(x, y);
+	cout << x << y;
 	
 }
